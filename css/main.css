@@ -1,13 +1,15 @@
-/* ==================== VARIABLES Y RESET ==================== */
+/* ==========================================================================
+   VARIABLES GLOBALES Y PALETA OFICIAL (RHINO'S KITCHEN)
+   ========================================================================== */
 :root {
-  --bg-color: #0e1117;
-  --card-bg: #161b22;
-  --primary-color: #ff5e14; /* Naranja fuego / apetito */
-  --primary-glow: rgba(255, 94, 20, 0.35);
+  --bg-color: #0a0a0c;
+  --card-bg: #14171d;
+  --primary-color: #c4151c; /* Rojo carmesí oficial del logotipo */
+  --primary-glow: rgba(196, 21, 28, 0.4);
   --accent-gold: #f59e0b;
-  --text-main: #f0f6fc;
-  --text-muted: #8b949e;
-  --border-color: #30363d;
+  --text-main: #ffffff;
+  --text-muted: #9aa0a6;
+  --border-color: rgba(255, 255, 255, 0.08);
   --whatsapp-green: #25d366;
   --radius-lg: 16px;
   --radius-md: 12px;
@@ -15,6 +17,7 @@
   --font-body: 'Poppins', sans-serif;
 }
 
+/* RESET GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -27,15 +30,17 @@ body {
   color: var(--text-main);
   font-family: var(--font-body);
   line-height: 1.5;
-  padding-bottom: 110px; /* Espacio para el carrito flotante */
+  padding-bottom: 110px; /* Margen para no tapar contenido con el carrito */
   overflow-x: hidden;
 }
 
-/* ==================== HEADER / HERO ==================== */
+/* ==========================================================================
+   ENCABEZADO / HERO (AJUSTE DE TAMAÑO CONTROLADO)
+   ========================================================================== */
 .hero-header {
-  padding: 2.5rem 1.2rem 1.5rem;
+  padding: 1.5rem 1rem 1rem;
   text-align: center;
-  background: radial-gradient(circle at 50% 0%, rgba(255, 94, 20, 0.18), transparent 75%);
+  background: radial-gradient(circle at 50% 0%, rgba(196, 21, 28, 0.2), transparent 75%);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -43,46 +48,49 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .logo-box {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
 }
 
+/* TAMAÑO DEL LOGO: Controla que no se desborde */
 .brand-logo {
-  width: 52px;
-  height: 52px;
-  object-fit: contain;
-  border-radius: 50%;
-  border: 2px solid var(--primary-color);
+  width: 58px;              /* Ancho contenido similar al primer diseño */
+  height: 58px;             /* Altura proporcionada */
+  object-fit: contain;      /* Mantiene la proporción sin deformar la silueta */
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
 }
 
 .brand-title {
   font-family: var(--font-title);
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-  color: #ffffff;
+  color: #c4151c;           /* Rojo del logotipo */
 }
 
 .brand-title span {
-  color: var(--primary-color);
+  color: #ffffff;           /* Blanco contrastado */
 }
 
 .brand-slogan {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .status-bar {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   background-color: rgba(22, 27, 34, 0.85);
   border: 1px solid var(--border-color);
   padding: 0.35rem 0.9rem;
@@ -90,28 +98,21 @@ body {
   font-size: 0.75rem;
   color: #c9d1d9;
 }
-
-.status-indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #238636;
-  box-shadow: 0 0 8px #238636;
-}
-
-/* ==================== CATEGORÍAS (BARRA HORIZONTAL) ==================== */
+/* ==========================================================================
+   CATEGORÍAS (BARRA HORIZONTAL PEGAJOSA)
+   ========================================================================== */
 .categories-nav {
   display: flex;
   gap: 0.6rem;
-  padding: 1rem 1.2rem;
+  padding: 0.9rem 1.2rem;
   overflow-x: auto;
   scrollbar-width: none;
   position: sticky;
   top: 0;
-  background-color: rgba(14, 17, 23, 0.95);
+  background-color: rgba(10, 10, 12, 0.95);
   backdrop-filter: blur(12px);
   z-index: 50;
-  border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .categories-nav::-webkit-scrollbar {
@@ -138,13 +139,32 @@ body {
   box-shadow: 0 0 14px var(--primary-glow);
 }
 
-/* ==================== LISTA DE PRODUCTOS ==================== */
+/* Etiqueta sutil para Alitas, Sushi y Ensaladas */
+.tag-soon {
+  font-size: 0.60rem;
+  background-color: rgba(196, 21, 28, 0.25);
+  color: #ff6b6b;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Transparencia leve para indicar que aún no hay ítems cargados */
+.filter-btn.btn-disabled {
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   CATÁLOGO DE PRODUCTOS
+   ========================================================================== */
 .menu-container {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
   padding: 1.2rem;
-  max-width: 600px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -155,8 +175,8 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease, opacity 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
 }
 
 .menu-card:active {
@@ -167,7 +187,7 @@ body {
   position: relative;
   width: 100%;
   height: 210px;
-  background-color: #090d12;
+  background-color: #060709;
   overflow: hidden;
 }
 
@@ -179,6 +199,7 @@ body {
   display: block;
 }
 
+/* Insignias de producto */
 .badge {
   position: absolute;
   top: 12px;
@@ -196,12 +217,13 @@ body {
 
 .badge.best-seller {
   background-color: var(--accent-gold);
-  color: #000;
+  color: #000000;
   border: none;
 }
 
 .badge.spicy {
-  background-color: #dc2626;
+  background-color: var(--primary-color);
+  color: #ffffff;
   border: none;
 }
 
@@ -260,22 +282,25 @@ body {
   color: #ffffff;
 }
 
-/* ==================== CARRITO FLOTANTE / PEDIDO ==================== */
+/* ==========================================================================
+   CARRITO FLOTANTE / WHATSAPP
+   ========================================================================== */
 .floating-cart {
   position: fixed;
   bottom: 16px;
   left: 50%;
-  transform: translateX(-50%) translateY(120%);
+  transform: translateX(-50%) translateY(130%);
   width: calc(100% - 2rem);
   max-width: 480px;
-  background-color: #1c2128;
-  border: 1px solid var(--border-color);
+  background-color: rgba(20, 23, 29, 0.96);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(196, 21, 28, 0.4);
   border-radius: var(--radius-lg);
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
   z-index: 100;
   transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -325,5 +350,104 @@ body {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  box-shadow: 0 0 12px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 0 12px rgba(37, 211, 102, 0.35);
+}
+/* ==========================================================================
+   CAJAS Y PASTILLAS DE SABORES (QUESILLO Y YOGURES)
+   ========================================================================== */
+.flavor-selection-box {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin: 4px 0;
+}
+
+.flavor-label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.flavor-pills {
+  display: flex;
+  gap: 6px;
+}
+
+.flavor-pills.wrap-pills {
+  flex-wrap: wrap; /* Permite que los 8 sabores de yogur bajen de línea ordenadamente */
+}
+
+.flavor-pill {
+  font-size: 0.72rem;
+  font-weight: 500;
+  background-color: rgba(20, 23, 29, 0.95);
+  border: 1px solid rgba(196, 21, 28, 0.35); /* Borde sutil rojo institucional */
+  color: #f0f6fc;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+/* Animación de entrada al cambiar filtros */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Transición suave para el contador de la orden */
+.cart-count {
+  transition: transform 0.2s ease;
+}
+
+/* Aviso flotante (Toast) para categorías en preparación */
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  background: rgba(20, 23, 29, 0.95);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toast-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+/* Botón de papelera para vaciar el carrito */
+.btn-clear-cart {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-clear-cart:active {
+  background-color: var(--primary-color);
+  transform: scale(0.9);
 }
