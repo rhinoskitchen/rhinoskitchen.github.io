@@ -30,8 +30,8 @@
   <header class="hero-header">
     <div class="brand-container">
       <div class="logo-box">
-        <!-- Logotipo con tamaño controlado -->
-        <img src="media/fotos/logo13.png" alt="Rhino's Kitchen Logo" class="brand-logo">
+        <!-- Logotipo original en alta resolución -->
+        <img src="media/fotos/logo13.PNG" alt="Rhino's Kitchen Logo" class="brand-logo">
         
         <!-- Nombre de la marca con contraste rojo institucional y blanco -->
         <h1 class="brand-title">RHINO'S <span>KITCHEN</span></h1>
@@ -60,7 +60,7 @@
     <button class="filter-btn" data-category="hamburguesas">🍔 Burgers</button>
 
     <!-- 3. EXTRAS: En preparación -->
-    <button class="filter-btn btn-disabled" data-category="extras">🍟 Extras & Entradas<small class="tag-soon">Próximamente</small></button>
+    <button class="filter-btn btn-disabled" data-category="extras">🍟 Extras & Entradas <small class="tag-soon">Próximamente</small></button>
 
     <!-- 4. ALITAS: En preparación -->
     <button class="filter-btn btn-disabled" data-category="alitas">🍗 Alitas <small class="tag-soon">Próximamente</small></button>
@@ -80,29 +80,30 @@
     <!-- 9. COMBOS: Categoría activa -->
     <button class="filter-btn" data-category="combos">⚡ Combos Promo</button>
   </nav>
+
 <!-- ===================================================================
        SECCIÓN 3: CATÁLOGO DE PRODUCTOS (MAIN)
        Catálogo oficial de Smash Burgers de Rhino's Kitchen
        =================================================================== -->
   <main class="menu-container">
 
-<!-- hamburguesas -->
+    <!-- ==================== HAMBURGUESAS OFICIALES ==================== -->
+
     <!-- 1. RHINO KIDS ($4.00) -->
     <article class="menu-card" data-category="hamburguesas">
       <div class="media-wrapper">
-        <span class="badge best-seller"> Para los Pequeños 👶</span>
-        <img src="media/fotos/rhinokids.png" 
+        <span class="badge best-seller">Para los Pequeños 👶</span>
+        <img src="media/fotos/RHINO%20KIDS.jpg" 
              alt="Rhino Kids" 
              class="card-img" 
-             loading="lazy" 
+             loading="lazy">
       </div>
       <div class="card-body">
         <div class="card-header">
           <h2 class="item-name">Rhino Kids</h2>
           <span class="item-price">$4.00</span>
         </div>
-        <p class="item-description"> Pan , Salsa Roja , Carne De La Casa , Queso Amarillo , Pepinillos Cortados , Ingrediente de la Casa , Pan.</p>
-        <button class="btn-order" onclick="agregarAlPedido('Rhino Classic Carne', 6.00)">
+        <p class="item-description">Para los consentidos: suave pan  , jugosa carne , queso cheddar fundido, tomate fresco, pepinillos picaditos y salsa mayonesa especial. ¡Incluye papas fritas! 🍟</p>
         <button class="btn-order" onclick="agregarAlPedido('Rhino Kids', 4.00)">
           <span>Ordenar</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
@@ -110,23 +111,21 @@
       </div>
     </article>
 
-
     <!-- 2. RHINO CLASSIC CARNE ($6.00) -->
     <article class="menu-card" data-category="hamburguesas">
       <div class="media-wrapper">
         <span class="badge best-seller">Clásica Favorita ⭐</span>
-        <!-- Permite video o imagen de respaldo -->
-        <video class="card-video" autoplay muted loop playsinline poster="media/fotos/burger-classic.jpg">
-          <source src="media/videos/burger-promo.mp4" type="video/mp4">
-          <img src="media/fotos/burger-classic.jpg" alt="Rhino Classic Carne" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80';">
-        </video>
+        <img src="media/fotos/RHINO%20CLASSIC%20DE%20CARNE.jpg" 
+             alt="Rhino Classic Carne" 
+             class="card-img" 
+             loading="lazy">
       </div>
       <div class="card-body">
         <div class="card-header">
           <h2 class="item-name">Rhino Classic Carne</h2>
           <span class="item-price">$6.00</span>
         </div>
-        <p class="item-description">Carne smash de res con costra sellada, queso americano derretido, pepinillos crujientes y aderezo especial de la casa.</p>
+        <p class="item-description">Pan , carne , queso cheddar derretido, jamón, rodajas de tomate, cebolla blanca, papitas ralladas , lechuga fresca y salsas de la casa. ¡Con papas fritas! 🍟</p>
         <button class="btn-order" onclick="agregarAlPedido('Rhino Classic Carne', 6.00)">
           <span>Ordenar</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
@@ -134,22 +133,20 @@
       </div>
     </article>
 
-
     <!-- 3. RHINO CLASSIC POLLO ($6.00) -->
     <article class="menu-card" data-category="hamburguesas">
       <div class="media-wrapper">
-        <img src="media/fotos/burger-pollo.jpg" 
+        <img src="media/fotos/RHINO%20CLASSIC%20DE%20POLLO.jpg" 
              alt="Rhino Classic Pollo" 
              class="card-img" 
-             loading="lazy" 
-             onerror="this.src='https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=80';">
+             loading="lazy">
       </div>
       <div class="card-body">
         <div class="card-header">
           <h2 class="item-name">Rhino Classic Pollo</h2>
           <span class="item-price">$6.00</span>
         </div>
-        <p class="item-description">Pechuga de pollo marinada preparada a la plancha, lechuga fresca, queso fundido y salsa de ajo suave en pan brioche.</p>
+        <p class="item-description">Pan , pechuga a la plancha bien sazonado, queso cheddar americano, jamón, tomate,cebolla, papitas ralladas, lechuga y salsas de la casa. ¡Con papas fritas! 🍟</p>
         <button class="btn-order" onclick="agregarAlPedido('Rhino Classic Pollo', 6.00)">
           <span>Ordenar</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
@@ -157,23 +154,21 @@
       </div>
     </article>
 
-
     <!-- 4. RHINO CLASSIC ESPECIAL CARNE ($7.00) -->
     <article class="menu-card" data-category="hamburguesas">
       <div class="media-wrapper">
-        <span class="badge spicy">Con Tocineta 🥓</span>
-        <img src="media/fotos/burger-especial-carne.jpg" 
+        <span class="badge spicy">Con Huevo y Tocineta 🥓🍳</span>
+        <img src="media/fotos/RHINO%20CLASSIC%20DE%20CARNE%20ESPECIAL.jpg" 
              alt="Rhino Classic Especial Carne" 
              class="card-img" 
-             loading="lazy" 
-             onerror="this.src='https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80';">
+             loading="lazy">
       </div>
       <div class="card-body">
         <div class="card-header">
           <h2 class="item-name">Rhino Classic Especial Carne</h2>
           <span class="item-price">$7.00</span>
         </div>
-        <p class="item-description">Medallón de res smash con doble capa de queso cheddar, tocineta ahumada crujiente, cebolla caramelizada y salsa tártara.</p>
+        <p class="item-description">Pan , carne , huevo frito con yema tierna, tocineta crujiente, queso cheddar, jamón, cebolla , tomate, papitas ralladas, lechuga y salsas . ¡Con papas fritas! 🍟</p>
         <button class="btn-order" onclick="agregarAlPedido('Rhino Classic Especial Carne', 7.00)">
           <span>Ordenar</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
@@ -181,22 +176,21 @@
       </div>
     </article>
 
-
     <!-- 5. RHINO CLASSIC ESPECIAL POLLO ($7.00) -->
     <article class="menu-card" data-category="hamburguesas">
       <div class="media-wrapper">
-        <img src="media/fotos/burger-especial-pollo.jpg" 
+        <span class="badge spicy">Con Huevo y Tocineta 🥓🍳</span>
+        <img src="media/fotos/RHINO%20CLASSIC%20DE%20POLLO%20A%20%20LA%20PLANCHA%20ESPECIAL.jpg" 
              alt="Rhino Classic Especial Pollo" 
              class="card-img" 
-             loading="lazy" 
-             onerror="this.src='https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80';">
+             loading="lazy">
       </div>
       <div class="card-body">
         <div class="card-header">
           <h2 class="item-name">Rhino Classic Especial Pollo</h2>
           <span class="item-price">$7.00</span>
         </div>
-        <p class="item-description">Pechuga a la plancha sazonada al estilo especial, tocineta crujiente, queso derretido, tomate y mayonesa ahumada.</p>
+        <p class="item-description">Pechuga a la plancha , huevo frito montado, tocineta crocante, queso cheddar fundido, jamón, rodajas de tomate, cebolla, papitas , lechuga y salsas. ¡Con papas fritas! 🍟</p>
         <button class="btn-order" onclick="agregarAlPedido('Rhino Classic Especial Pollo', 7.00)">
           <span>Ordenar</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
@@ -204,60 +198,74 @@
       </div>
     </article>
 
-
-    <!-- 6. RHINO CRISPY ($7.00) -->
+    <!-- 6. RHINO CRISPY CLASSIC ($7.00) -->
     <article class="menu-card" data-category="hamburguesas">
       <div class="media-wrapper">
         <span class="badge spicy">Ultra Crujiente 🔥</span>
-        <img src="media/fotos/burger-crispy.jpg" 
-             alt="Rhino Crispy" 
+        <img src="media/fotos/RHINO%20CRYSPY%20CLASSIC.jpg" 
+             alt="Rhino Crispy Classic" 
              class="card-img" 
-             loading="lazy" 
-             onerror="this.src='https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80';">
+             loading="lazy">
       </div>
       <div class="card-body">
         <div class="card-header">
-          <h2 class="item-name">Rhino Crispy</h2>
+          <h2 class="item-name">Rhino Crispy Classic</h2>
           <span class="item-price">$7.00</span>
         </div>
-        <p class="item-description">Pechuga con empanizado sureño extra crujiente, pepinillos, ensalada coleslaw fresca y salsa Honey Mustard casera.</p>
-        <button class="btn-order" onclick="agregarAlPedido('Rhino Crispy', 7.00)">
+        <p class="item-description">Pan , pollo rebozada  estilo sureño, queso cheddar fundido, jamón, tomate, , papitas crujientes, lechuga fresca y salsas. ¡Con papas fritas! 🍟</p>
+        <button class="btn-order" onclick="agregarAlPedido('Rhino Crispy Classic', 7.00)">
           <span>Ordenar</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
         </button>
       </div>
     </article>
 
-
-    <!-- 7. RHINO CHULETA ($10.00) -->
+    <!-- 7. RHINO CRISPY ESPECIAL ($8.00) -->
     <article class="menu-card" data-category="hamburguesas">
       <div class="media-wrapper">
-        <span class="badge best-seller">La Bestia Suprema 👑</span>
-        <img src="media/fotos/burger-chuleta.jpg" 
-             alt="Rhino Chuleta" 
+        <span class="badge spicy">Crispy + Huevo + Tocineta 🔥🍳</span>
+        <img src="media/fotos/RHINO%20CRYSPY%20ESPECIAL.jpg" 
+             alt="Rhino Crispy Especial" 
              class="card-img" 
-             loading="lazy" 
-             onerror="this.src='https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=600&q=80';">
+             loading="lazy">
       </div>
       <div class="card-body">
         <div class="card-header">
-          <h2 class="item-name">Rhino Chuleta</h2>
-          <span class="item-price">$10.00</span>
+          <h2 class="item-name">Rhino Crispy Especial</h2>
+          <span class="item-price">$8.00</span>
         </div>
-        <p class="item-description">Corte de chuleta ahumada jugosa a la parrilla, queso derretido en abundancia, tocineta crujiente, vegetales frescos y salsa barbecue especial.</p>
-        <button class="btn-order" onclick="agregarAlPedido('Rhino Chuleta', 10.00)">
+        <p class="item-description">Pollo rebozado crocante, huevo frito, tocineta ahumada crujiente, doble queso cheddar derretido, jamón, cebolla, tomate, papitas , lechuga y salsas de la casa. ¡Con papas fritas! 🍟</p>
+        <button class="btn-order" onclick="agregarAlPedido('Rhino Crispy Especial', 8.00)">
           <span>Ordenar</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
         </button>
       </div>
     </article>
 
-<!-- ===================================================================
-         SECCIÓN: EXTRAS & ENTRADAS (PRÓXIMAMENTE / EN PREPARACIÓN)
-         data-category="extras" se conecta con el filtro superior
-         =================================================================== -->
+    <!-- 8. RHINO CHULETA ($8.00) -->
+    <article class="menu-card" data-category="hamburguesas">
+      <div class="media-wrapper">
+        <span class="badge best-seller">Corte Ahumado Supremo 👑</span>
+        <img src="media/fotos/RHINO%20CLASSIC%20DE%20CHULETA.jpg" 
+             alt="Rhino Classic Chuleta" 
+             class="card-img" 
+             loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-header">
+          <h2 class="item-name">Rhino Classic Chuleta</h2>
+          <span class="item-price">$8.00</span>
+        </div>
+        <p class="item-description">Pan , corte de chuleta ahumada a la plancha, tocineta crujiente, queso cheddar fundido, jamón, rodajas de tomate, papitas crocantes, lechuga y aderezos especiales. ¡Con papas fritas! 🍟</p>
+        <button class="btn-order" onclick="agregarAlPedido('Rhino Classic Chuleta', 8.00)">
+          <span>Ordenar</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        </button>
+      </div>
+    </article>
 
-    <!-- 1. PAPAS FRITAS EXTRA -->
+
+    <!-- ==================== EXTRAS (PRÓXIMAMENTE) ==================== -->
     <article class="menu-card" data-category="extras">
       <div class="media-wrapper">
         <span class="badge best-seller">Próximamente ⏳</span>
@@ -279,8 +287,6 @@
       </div>
     </article>
 
-
-    <!-- 2. TEQUEÑOS TRADICIONALES DE QUESO -->
     <article class="menu-card" data-category="extras">
       <div class="media-wrapper">
         <span class="badge best-seller">Próximamente ⏳</span>
@@ -303,12 +309,7 @@
     </article>
 
 
-<!-- ===================================================================
-         SECCIÓN: ALITAS (PRÓXIMAMENTE / EN PREPARACIÓN)
-         data-category="alitas" se conecta con el filtro superior
-         =================================================================== -->
-
-    <!-- 1. ALITAS BBQ -->
+    <!-- ==================== ALITAS (PRÓXIMAMENTE) ==================== -->
     <article class="menu-card" data-category="alitas">
       <div class="media-wrapper">
         <span class="badge best-seller">Próximamente ⏳</span>
@@ -330,8 +331,6 @@
       </div>
     </article>
 
-
-    <!-- 2. ALITAS PICANTES (SPICY) -->
     <article class="menu-card" data-category="alitas">
       <div class="media-wrapper">
         <span class="badge spicy">Fuego Rhino 🔥</span>
@@ -353,8 +352,6 @@
       </div>
     </article>
 
-
-    <!-- 3. ALITAS HONEY (CON MIEL) -->
     <article class="menu-card" data-category="alitas">
       <div class="media-wrapper">
         <span class="badge best-seller">Agridulce 🍯</span>
@@ -376,8 +373,6 @@
       </div>
     </article>
 
-
-    <!-- 4. ALITAS CRISPY -->
     <article class="menu-card" data-category="alitas">
       <div class="media-wrapper">
         <span class="badge spicy">Super Crocante 🍗</span>
@@ -399,12 +394,8 @@
       </div>
     </article>
 
-    <!-- ===================================================================
-         SECCIÓN: SUSHI (PRÓXIMAMENTE / EN PREPARACIÓN)
-         data-category="sushi" se conecta con el filtro superior
-         =================================================================== -->
 
-    <!-- 1. SUSHI DE AGUACATE -->
+    <!-- ==================== SUSHI (PRÓXIMAMENTE) ==================== -->
     <article class="menu-card" data-category="sushi">
       <div class="media-wrapper">
         <span class="badge best-seller">Próximamente ⏳</span>
@@ -420,8 +411,6 @@
           <span class="item-price" style="font-size: 0.95rem; color: #ff6b6b;">Pronto</span>
         </div>
         <p class="item-description">Roll relleno de queso crema suave, cobertura cremosa de láminas de aguacate fresco y salsa anguila artesanal.</p>
-        
-        <!-- SELECTOR DE PRESENTACIÓN: Frío o Tempura -->
         <div class="sushi-option-box">
           <span class="sushi-option-label">Estilo:</span>
           <div class="sushi-pills">
@@ -429,15 +418,12 @@
             <span class="sushi-pill">🔥 Tempura</span>
           </div>
         </div>
-
         <button class="btn-order btn-disabled" disabled style="opacity: 0.6; cursor: not-allowed; justify-content: center;">
           <span>Disponible muy pronto</span>
         </button>
       </div>
     </article>
 
-
-    <!-- 2. SUSHI DE MANGO -->
     <article class="menu-card" data-category="sushi">
       <div class="media-wrapper">
         <span class="badge spicy">Toque Tropical 🥭</span>
@@ -453,8 +439,6 @@
           <span class="item-price" style="font-size: 0.95rem; color: #ff6b6b;">Pronto</span>
         </div>
         <p class="item-description">Combinación agridulce perfecta con finas rodajas de mango maduro, relleno de queso crema y reducción especial teriyaki.</p>
-        
-        <!-- SELECTOR DE PRESENTACIÓN: Frío o Tempura -->
         <div class="sushi-option-box">
           <span class="sushi-option-label">Estilo:</span>
           <div class="sushi-pills">
@@ -462,15 +446,12 @@
             <span class="sushi-pill">🔥 Tempura</span>
           </div>
         </div>
-
         <button class="btn-order btn-disabled" disabled style="opacity: 0.6; cursor: not-allowed; justify-content: center;">
           <span>Disponible muy pronto</span>
         </button>
       </div>
     </article>
 
-
-    <!-- 3. SUSHI DE PLÁTANO -->
     <article class="menu-card" data-category="sushi">
       <div class="media-wrapper">
         <span class="badge best-seller">Sabor Latino 🍌</span>
@@ -486,8 +467,6 @@
           <span class="item-price" style="font-size: 0.95rem; color: #ff6b6b;">Pronto</span>
         </div>
         <p class="item-description">Envoltura de plátano maduro frito, queso crema, semillas de ajonjolí tostadas y corona de salsa dulce.</p>
-        
-        <!-- SELECTOR DE PRESENTACIÓN: Frío o Tempura -->
         <div class="sushi-option-box">
           <span class="sushi-option-label">Estilo:</span>
           <div class="sushi-pills">
@@ -495,15 +474,12 @@
             <span class="sushi-pill">🔥 Tempura</span>
           </div>
         </div>
-
         <button class="btn-order btn-disabled" disabled style="opacity: 0.6; cursor: not-allowed; justify-content: center;">
           <span>Disponible muy pronto</span>
         </button>
       </div>
     </article>
 
-
-    <!-- 4. SUSHI DE SALMÓN -->
     <article class="menu-card" data-category="sushi">
       <div class="media-wrapper">
         <span class="badge spicy">Corte Premium 🍣</span>
@@ -519,8 +495,6 @@
           <span class="item-price" style="font-size: 0.95rem; color: #ff6b6b;">Pronto</span>
         </div>
         <p class="item-description">Salmón fresco seleccionado, base de queso crema y arroz sazonado, bañado en suave salsa soya dulce.</p>
-        
-        <!-- SELECTOR DE PRESENTACIÓN: Frío o Tempura -->
         <div class="sushi-option-box">
           <span class="sushi-option-label">Estilo:</span>
           <div class="sushi-pills">
@@ -528,127 +502,139 @@
             <span class="sushi-pill">🔥 Tempura</span>
           </div>
         </div>
-
         <button class="btn-order btn-disabled" disabled style="opacity: 0.6; cursor: not-allowed; justify-content: center;">
           <span>Disponible muy pronto</span>
         </button>
       </div>
     </article>
 
-    <!-- ===================================================================
-         SECCIÓN: POSTRES ARTESANALES
-         data-category="postres" se conecta con el filtro superior
-         =================================================================== -->
 
-    <!-- 1. QUESILLO CASERO RHINO (TRADICIONAL O COCO) -->
+    <!-- ==================== POSTRES ARTESANALES ==================== -->
+
+    <!-- 1. QUESILLOS OFICIALES -->
     <article class="menu-card" data-category="postres">
       <div class="media-wrapper">
         <span class="badge best-seller">Postre Estrella ⭐</span>
-        <img src="media/fotos/quesillo.jpg" 
-             alt="Quesillo Casero Rhino" 
+        <img src="media/fotos/QUESILLO.jpg" 
+             alt="Quesillo Tradicional y de Coco" 
              class="card-img" 
-             loading="lazy" 
-             onerror="this.src='https://images.unsplash.com/photo-1528975604071-b4dc52a2d18c?auto=format&fit=crop&w=600&q=80';">
+             loading="lazy">
       </div>
       <div class="card-body">
         <div class="card-header">
-          <h2 class="item-name">Quesillo Horneado</h2>
-          <span class="item-price">$3.50</span>
+          <h2 class="item-name">Quesillo Tradicional</h2>
+          <span class="item-price">$1.70</span>
         </div>
-        <p class="item-description">Receta tradicional con textura cremosa y caramelo dorado profundo. Elige tu preparación favorita.</p>
+        <p class="item-description">Receta tradicional artesanal con textura suave, cremosa y caramelo dorado. Disponible en versión Tradicional ($1.70) o Quesillo de Coco ($2.30).</p>
 
-        <!-- SELECTOR DE SABOR: Tradicional o Coco -->
+        <!-- SELECTOR DE SABORES VISUAL -->
         <div class="flavor-selection-box">
-          <span class="flavor-label">Selecciona tu estilo:</span>
+          <span class="flavor-label">Opciones en carta:</span>
           <div class="flavor-pills">
-            <span class="flavor-pill">🍮 Tradicional</span>
-            <span class="flavor-pill">🥥 De Coco</span>
+            <span class="flavor-pill">🍮 Tradicional ($1.70)</span>
+            <span class="flavor-pill">🥥 De Coco ($2.30)</span>
           </div>
         </div>
 
-        <button class="btn-order" onclick="agregarAlPedido('Quesillo Horneado (Tradicional/Coco)', 3.50)">
-          <span>Ordenar</span>
+        <button class="btn-order" onclick="agregarAlPedido('Quesillo Tradicional', 1.70)">
+          <span>Ordenar Tradicional</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        </button>
+        <button class="btn-order" style="margin-top: 4px;" onclick="agregarAlPedido('Quesillo de Coco', 2.30)">
+          <span>Ordenar de Coco</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
         </button>
       </div>
     </article>
 
-
-    <!-- 2. YOGUR ARTESANAL (VARIEDAD DE SABORES) -->
+    <!-- 2. YOGUR ARTESANAL (FOTO OFICIAL) -->
     <article class="menu-card" data-category="postres">
       <div class="media-wrapper">
         <span class="badge spicy">100% Cremoso 🥛</span>
-        <img src="media/fotos/yogur-frutas.jpg" 
+        <img src="media/fotos/YOGURT.jpg" 
              alt="Yogur Artesanal Rhino" 
              class="card-img" 
-             loading="lazy" 
-             onerror="this.src='https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80';">
+             loading="lazy">
       </div>
       <div class="card-body">
         <div class="card-header">
           <h2 class="item-name">Yogur Artesanal</h2>
-          <span class="item-price">$2.50</span>
+          <span class="item-price">$2.00</span>
         </div>
-        <p class="item-description">Yogur cremoso y espeso preparado con fruta natural. Especifica tu sabor al confirmar por WhatsApp.</p>
+        <p class="item-description">Yogur artesanal cremoso con trozos y pulpa de fruta 100% natural. Elige tu sabor preferido al confirmar el pedido.</p>
 
-        <!-- CATÁLOGO DE SABORES EN PASTILLAS -->
+        <!-- 10 SABORES OFICIALES DEL FLYER -->
         <div class="flavor-selection-box">
-          <span class="flavor-label">Sabores disponibles:</span>
+          <span class="flavor-label">10 Sabores disponibles:</span>
           <div class="flavor-pills wrap-pills">
             <span class="flavor-pill">🍑 Melocotón</span>
-            <span class="flavor-pill">🍓 Fresa</span>
+            <span class="flavor-pill">🍑 Durazno</span>
             <span class="flavor-pill">🟡 Parchita</span>
+            <span class="flavor-pill">🍍 Piña</span>
+            <span class="flavor-pill">🍇 Mora</span>
+            <span class="flavor-pill">🥭 Mango</span>
             <span class="flavor-pill">🤍 Guanábana</span>
             <span class="flavor-pill">🍯 Arequipe</span>
-            <span class="flavor-pill">🍍 Piña</span>
-            <span class="flavor-pill">🍑 Durazno</span>
             <span class="flavor-pill">🟣 Ciruela</span>
+            <span class="flavor-pill">🍓 Fresa</span>
           </div>
         </div>
 
-        <button class="btn-order" onclick="agregarAlPedido('Yogur Artesanal Frutas', 2.50)">
+        <button class="btn-order" onclick="agregarAlPedido('Yogur Artesanal', 2.00)">
           <span>Ordenar</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
         </button>
       </div>
     </article>
 
-    <!-- ===================================================================
-         SECCIÓN: BEBIDAS
-         data-category="bebidas" se conecta con el filtro superior
-         =================================================================== -->
 
-    <!-- 1. REFRESCO GLUB 1 LITRO ($1.50) -->
+    <!-- ==================== BEBIDAS OFICIALES ==================== -->
+
+    <!-- 1. REFRESCO GLUP 1L -->
     <article class="menu-card" data-category="bebidas">
+      <div class="media-wrapper">
+        <img src="media/fotos/REFRESCO%20DE%201L.jpg" 
+             alt="Refresco Glup 1 Litro" 
+             class="card-img" 
+             loading="lazy">
+      </div>
       <div class="card-body">
         <div class="card-header">
-          <h2 class="item-name">Refresco GLUB 1L</h2>
+          <h2 class="item-name">Refresco Glup! 1L</h2>
           <span class="item-price">$1.50</span>
         </div>
-        <p class="item-description">Botella plástica de 1 Litro (sabores según disponibilidad, servido bien frío).</p>
-        <button class="btn-order" onclick="agregarAlPedido('Refresco GLUB 1L', 1.50)">
+        <p class="item-description">Botella plástica de 1 Litro. Sabor Cola servido bien frío para acompañar tus hamburguesas.</p>
+        <button class="btn-order" onclick="agregarAlPedido('Refresco Glup! 1L', 1.50)">
           <span>Ordenar</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
         </button>
       </div>
     </article>
 
-    <!-- 2. REFRESCO GLUB 2 LITROS ($2.00) -->
+    <!-- 2. REFRESCO GLUP 2L -->
     <article class="menu-card" data-category="bebidas">
+      <div class="media-wrapper">
+        <span class="badge best-seller">Familiar 🥤</span>
+        <img src="media/fotos/REFRESCO%20DE%202L.jpg" 
+             alt="Refresco Glup 2 Litros" 
+             class="card-img" 
+             loading="lazy">
+      </div>
       <div class="card-body">
         <div class="card-header">
-          <h2 class="item-name">Refresco GLUB 2L</h2>
+          <h2 class="item-name">Refresco Glup! 2L</h2>
           <span class="item-price">$2.00</span>
         </div>
-        <p class="item-description">Botella familiar de 2 Litros, ideal para acompañar tus combos en casa.</p>
-        <button class="btn-order" onclick="agregarAlPedido('Refresco GLUB 2L', 2.00)">
+        <p class="item-description">Botella familiar de 2 Litros. Variedad de sabores disponibles: Cola, Kolita, Uva, Limón y Naranja (servido bien frío).</p>
+        <button class="btn-order" onclick="agregarAlPedido('Refresco Glup! 2L', 2.00)">
           <span>Ordenar</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
         </button>
       </div>
     </article>
 
-<!-- 1. PROMO DÚO PAREJA ($11.00) -->
+
+    <!-- ==================== COMBOS PROMOCIONALES ==================== -->
     <article class="menu-card" data-category="combos">
       <div class="media-wrapper">
         <span class="badge best-seller">Ahorro Pareja ⚡</span>
@@ -664,7 +650,7 @@
           <span class="item-price">$11.00</span>
         </div>
         <p class="item-description">
-          1 Rhino Classic Carne + 1 Rhino Classic Pollo + <strong>2 Raciones de papas fritas 🍟</strong> + 1 Refresco GLUB 1L. ¡Delivery Gratis en la zona! 🛵
+          1 Rhino Classic Carne + 1 Rhino Classic Pollo + <strong>2 Raciones de papas fritas 🍟</strong> + 1 Refresco Glup! 1L. ¡Delivery Gratis en la zona! 🛵
         </p>
         <button class="btn-order" onclick="agregarAlPedido('Promo Dúo Pareja', 11.00)">
           <span>Ordenar</span>
@@ -673,7 +659,6 @@
       </div>
     </article>
 
-    <!-- 2. COMBO FAMILIAR RHINO ($20.00) -->
     <article class="menu-card" data-category="combos">
       <div class="media-wrapper">
         <span class="badge best-seller">Ahorro Familiar 👑</span>
@@ -689,7 +674,7 @@
           <span class="item-price">$20.00</span>
         </div>
         <p class="item-description">
-          1 Classic Carne + 1 Classic Pollo + 2 Rhino Kids + <strong>4 Raciones de papas fritas 🍟</strong> + 1 Refresco GLUB 2L. ¡Delivery Gratis en la zona! 🛵
+          1 Classic Carne + 1 Classic Pollo + 2 Rhino Kids + <strong>4 Raciones de papas fritas 🍟</strong> + 1 Refresco Glup! 2L. ¡Delivery Gratis en la zona! 🛵
         </p>
         <button class="btn-order" onclick="agregarAlPedido('Combo Familiar Rhino', 20.00)">
           <span>Ordenar</span>
@@ -698,7 +683,6 @@
       </div>
     </article>
 
-
   </main>
 
 <!-- ===================================================================
@@ -706,12 +690,9 @@
        =================================================================== -->
   <aside class="floating-cart" id="floatingCart">
     <div class="cart-summary">
-      <!-- Botón para reiniciar/vaciar la orden a cero -->
       <button type="button" class="btn-clear-cart" onclick="vaciarPedido()" title="Vaciar pedido" aria-label="Vaciar pedido">
         🗑️
       </button>
-
-      <!-- Contador numérico de platos seleccionados -->
       <span class="cart-count" id="cartCount">0</span>
       <div class="cart-text">
         <small>Total estimado</small>
@@ -719,7 +700,6 @@
       </div>
     </div>
 
-    <!-- Botón interactivo de WhatsApp -->
     <a href="javascript:void(0)" id="whatsappCheckout" class="btn-checkout" onclick="enviarPedidoWhatsApp()">
       Pedir por WhatsApp 
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -728,11 +708,9 @@
     </a>
   </aside>
 
-
   <!-- ===================================================================
        SECCIÓN 5: CARGA DEL SCRIPT JAVASCRIPT
-       Mantiene la conexión directa con js/main.js para toda la lógica
        =================================================================== -->
-<script src="js/main.js?v=200"></script>
+<script src="js/main.js?v=201"></script>
 </body>
 </html>
